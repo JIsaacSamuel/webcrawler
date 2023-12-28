@@ -2,6 +2,27 @@
 const { JSDOM } = require('jsdom')
 
 // Functions
+async function crawlPage(basicURL) {
+    const webpage = await fetch(basicURL, {})
+    // const webpagejson = await webpage.json()
+    try {
+        if(webpage.status >= 400){
+            console.log('Error: 400+')
+        } 
+        const conttype = webpage.headers.get('content-type')
+        if (!conttype.includes('text/html')) {
+            console.log('Content type not supported')
+        } else {
+            const requrls = getURLsFromHTML(await webpage.text(), basicURL)
+            for(let x of requrls){
+                console.log(x)
+            }
+        }
+    } catch (err) {
+        console.log(`An unexpected error orrcured: ${err.message}`)
+    }
+}
+
 function normalizeURL(url) {
     const list = url.split('//')
     const link = list[1].toLowerCase()
@@ -24,6 +45,7 @@ function getURLsFromHTML(htmlBody, baseURL) {
 // Exports
 module.exports = {
     normalizeURL,
-    getURLsFromHTML
+    getURLsFromHTML,
+    crawlPage
 }
   
