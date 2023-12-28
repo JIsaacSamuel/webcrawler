@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/JIsaacSamuel/webcrawler/issues"
   },
-  "homepage": "https://github.com/JIsaacSamuel/webcrawler#readme"
+  "homepage": "https://github.com/JIsaacSamuel/webcrawler#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jsdom": "^23.0.1"
+  }
 }
