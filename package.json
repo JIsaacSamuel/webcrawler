@@ -1,0 +1,24 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "This is a guided project to build a Web Crawler. Project started on December 28, 2023",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JIsaacSamuel/webcrawler.git"
+  },
+  "keywords": [
+    "Web",
+    "Crawler"
+  ],
+  "author": "J Isaac Samuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JIsaacSamuel/webcrawler/issues"
+  },
+  "homepage": "https://github.com/JIsaacSamuel/webcrawler#readme"
+}
